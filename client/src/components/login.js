@@ -16,7 +16,7 @@ const history = useHistory()
     }
 
     const login =()=>{
-        axios.post("http://localhost:8800/Login",user)
+        axios.post("http://localhost:8800/server/signin",user)
         .then(res=>{alert(res.data.message)
         setLoginUser(res.data.user)
     history.push("/")})
